@@ -31,7 +31,7 @@ const messageRoute = require("./routes/user_message");
 app.use("/", indexRoute);
 app.use("/login", loginRoute);
 app.use("/menu", menuRoute);
-app.post("/api/contact", messageRoute);
+app.post("/", messageRoute);
 app.post("/api/login", loginRoute);
 
 //listening to the port

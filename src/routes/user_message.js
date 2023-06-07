@@ -1,9 +1,10 @@
 const express = require("express");
 let router = express.Router();
+const swal = require("sweetalert");
 
 const comp = require("../model/complaint");
 
-router.post("/api/contact", (req, res) => {
+router.post("/", (req, res) => {
   try {
     let newC = new comp({
       name: req.body.nam,
@@ -16,9 +17,12 @@ router.post("/api/contact", (req, res) => {
       .save()
       .then(() => {
         console.log("complaint added");
-        res.send("success");
+        // res.send("success");
+        res.render("index", { result: "Your message have been recorded" });
+        swal("Oops!", "Something went wrong!", "error");
       })
       .catch((err) => {
+        res.render("index", { result: "Sorry cannot send data right now" });
         console.log(err);
       });
   } catch (err) {
