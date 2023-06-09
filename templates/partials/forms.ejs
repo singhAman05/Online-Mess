@@ -1,0 +1,45 @@
+<section class="contact-us">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="section-heading">
+                    <h2>Message</h2>
+                </div>
+                <% if(result != "") { %>
+                <div class= "alert alert-success" role="alert">
+                    <%= result %>
+                </div>
+                <% } %>
+                <form id="contact" action="/" method="POST">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <fieldset>
+                                <input name="nam" type="text" class="form-control" id="name" placeholder="Your Name..." required>
+                            </fieldset>
+                            <fieldset>
+                                <input name="email" type="text" class="form-control" id="email" placeholder="Your Gsuit-Email..." required>
+                            </fieldset>
+                            <fieldset>
+                                <input name="phone" type="text" class="form-control" id="phone" placeholder="Your Registration number..." required>
+                            </fieldset>
+                        </div>
+                        <div class="col-md-6">
+                            <fieldset>
+                                <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your Query..." required></textarea>
+                            </fieldset>
+                            <fieldset>
+                                <button type="submit" id="form-submit" class="btn">Send Message</button>
+                            </fieldset>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <div class="section-heading contact-info">
+                    <h2>Contact Info</h2>
+                    <p>You can contact Mess Manager in case your issue is not being resolved after a reminder complaint. The privacy of your messgae will be our priority and it will not be shared with no one except the Mess Committee<br><br><em>Your Mess Manager<br>Shabdarth Tiwary</em></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>  
